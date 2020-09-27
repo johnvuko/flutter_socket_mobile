@@ -1,0 +1,36 @@
+group 'co.eivo.socket_mobile'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    maven {
+        url "https://bin.socketmobile.com/repo/snapshots"
+    }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
