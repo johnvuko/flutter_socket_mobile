@@ -25,7 +25,7 @@ https://docs.socketmobile.com
 In the `Podfile` uncomment:
 
 ```
-    platform :ios, '9.0'
+    platform :ios, '10.0'
 ```
 
 In the `Info.plist` add:
