@@ -21,9 +21,9 @@ class SocketMobile {
   final _messageController = StreamController<SocketMobileMessage>.broadcast();
 
   Future<void> configure({
-    String developerIdIOS,
-    String appKeyIOS,
-    String appIdIOS,
+    required String developerIdIOS,
+    required String appKeyIOS,
+    required String appIdIOS,
   }) async {
     Map<String, dynamic> params;
 

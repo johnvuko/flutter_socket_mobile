@@ -9,5 +9,8 @@ class SocketMobileMessage extends Equatable {
   const SocketMobileMessage(this.message, this.device);
 
   @override
-  List<Object> get props => [message, device];
+  List<Object> get props => [
+        message,
+        device,
+      ];
 }

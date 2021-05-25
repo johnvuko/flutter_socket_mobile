@@ -10,7 +10,11 @@ class SocketMobileDevice extends Equatable {
   /// session ID
   final String guid;
 
-  const SocketMobileDevice(this.name, this.uuid, this.guid);
+  const SocketMobileDevice(
+    this.name,
+    this.uuid,
+    this.guid,
+  );
 
   factory SocketMobileDevice.fromJson(Map json) {
     return SocketMobileDevice(
