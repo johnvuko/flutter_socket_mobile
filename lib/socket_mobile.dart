@@ -21,20 +21,26 @@ class SocketMobile {
   final _messageController = StreamController<SocketMobileMessage>.broadcast();
 
   Future<void> configure({
-    required String developerIdIOS,
+    required String developerId,
     required String appKeyIOS,
     required String appIdIOS,
+    required String appKeyAndroid,
+    required String appIdAndroid,
   }) async {
     Map<String, dynamic> params;
 
     if (Platform.isIOS) {
       params = {
-        'developerId': developerIdIOS,
+        'developerId': developerId,
         'appKey': appKeyIOS,
         'appId': appIdIOS,
       };
     } else {
-      params = {};
+      params = {
+        'developerId': developerId,
+        'appKey': appKeyAndroid,
+        'appId': appIdAndroid,
+      };
     }
 
     _channel.setMethodCallHandler((MethodCall call) async {

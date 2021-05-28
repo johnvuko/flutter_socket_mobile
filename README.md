@@ -1,19 +1,6 @@
 # socket_mobile
 
-WORK IN PROGRESS (only iOS for now)
-
 Capture SDK of [Socket Mobile](https://www.socketmobile.com) for Flutter using native SDK.
-
-## Getting Started
-
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
 ## Installation
 
@@ -39,23 +26,41 @@ In the `Info.plist` add:
 
 ### Android
 
-https://docs.socketmobile.com/capture/java/en/latest/android/getting-started.html
+You must have installed the [Campanion application](https://play.google.com/store/apps/details?id=com.socketmobile.companion).
+More informations here: https://www.socketmobile.com/support/application-mode-for-android-8
 
-in your `AndroidManifest.xml¶`:
+In `android/app/src/main/AndroidManifest.xml` add:
 
+```xml
+   <application
+        android:networkSecurityConfig="@xml/network_security_config">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
 ```
-    <meta-data
-        android:name="com.socketmobile.capture.APP_KEY"
-        android:value="..."/>
-    <meta-data
-        android:name="com.socketmobile.capture.DEVELOPER_ID"
-        android:value="..."/>
-```
 
+In `android/app/src/main/res/xml/network_security_config.xml` add:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <base-config cleartextTrafficPermitted="false" />
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="false">localhost</domain>
+    <domain includeSubdomains="false">127.0.0.1</domain>
+  </domain-config>
+</network-security-config>
+```
 
 ## Usage
 
-```
+```dart
+SocketMobile.shared.configure(
+	developerId: appConfiguration.socketDeveloperId,
+	appKeyIOS: appConfiguration.iOSSocketMobileAppKey,
+	appIdIOS: appConfiguration.iOSSocketMobileAppId,
+	appKeyAndroid: appConfiguration.androidSocketMobileAppKey,
+	appIdAndroid: appConfiguration.androidSocketMobileAppId,
+);
 ```
 
 ## Author

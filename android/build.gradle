@@ -5,13 +5,14 @@ buildscript {
     repositories {
         google()
         jcenter()
+
         maven {
             url "https://bin.socketmobile.com/repo/snapshots"
         }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:4.1.0'
     }
 }
 
@@ -19,6 +20,7 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+
         maven {
             url "https://bin.socketmobile.com/repo/snapshots"
         }
@@ -28,16 +30,13 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 18
+        minSdkVersion 16
     }
-    lintOptions {
-        disable 'InvalidPackage'
-    }
-}
 
-dependencies {
-    implementation 'com.socketmobile:capture-android:1.1.60'
+    dependencies {
+        implementation 'com.socketmobile:capture:1.1.83'
+    }
 }

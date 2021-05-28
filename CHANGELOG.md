@@ -1,3 +1,7 @@
+## [1.0.0]
+
+* Add Android support
+
 ## [0.1.0]
 
 * Migrate to null safety

@@ -1,4 +1,4 @@
-package com.example.socket_mobile_example;
+package co.eivo.socket_mobile_example;
 
 import io.flutter.embedding.android.FlutterActivity;
 
