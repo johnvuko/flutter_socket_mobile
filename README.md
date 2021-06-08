@@ -7,6 +7,13 @@ Capture SDK of [Socket Mobile](https://www.socketmobile.com) for Flutter using n
 Be sure to read requirements of the native SDK:
 https://docs.socketmobile.com
 
+Add this to your package's pubspec.yaml file:
+
+```
+dependencies:
+  socket_mobile: ^1.0.0
+```
+
 ### iOS
 
 In the `Podfile` uncomment:
