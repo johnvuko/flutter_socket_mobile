@@ -1,6 +1,6 @@
 #import "SocketMobileService.h"
 
-#import <SKTCaptureObjC/SktCaptureHelper.h>
+#import <CaptureSDK/CaptureSDK.h>
 
 @interface SocketMobileService()<SKTCaptureHelperDelegate>{
 	SKTCaptureHelper* _capture;

@@ -11,6 +11,7 @@ import com.socketmobile.capture.client.ConnectionCallback;
 import com.socketmobile.capture.client.ConnectionState;
 import com.socketmobile.capture.client.DataEvent;
 import com.socketmobile.capture.client.DeviceClient;
+import com.socketmobile.capture.client.DeviceManagerStateEvent;
 import com.socketmobile.capture.client.DeviceState;
 import com.socketmobile.capture.client.DeviceStateEvent;
 import com.socketmobile.capture.client.callbacks.PropertyCallback;
@@ -101,6 +102,11 @@ public class SocketMobileService implements ConnectionCallback, CaptureClient.Li
                 Log.d("SocketMobileService", "onConnectionStateChanged: disconnected");
             }
         }
+    }
+
+    @Override
+    public void onDeviceManagerStateEvent(DeviceManagerStateEvent deviceManagerStateEvent) {
+        Log.d("SocketMobileService", "onDeviceManagerStateEvent");
     }
 
     @Override

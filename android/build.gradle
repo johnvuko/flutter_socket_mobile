@@ -7,12 +7,12 @@ buildscript {
         jcenter()
 
         maven {
-            url "https://bin.socketmobile.com/repo/snapshots"
+            url "https://bin.socketmobile.com/repo/releases"
         }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:7.3.0'
     }
 }
 
@@ -22,7 +22,7 @@ rootProject.allprojects {
         jcenter()
 
         maven {
-            url "https://bin.socketmobile.com/repo/snapshots"
+            url "https://bin.socketmobile.com/repo/releases"
         }
     }
 }
@@ -37,6 +37,6 @@ android {
     }
 
     dependencies {
-        implementation 'com.socketmobile:capture:1.1.83'
+        implementation 'com.socketmobile:capture-android:1.7.45'
     }
 }

@@ -16,7 +16,7 @@ A new flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'SKTCaptureObjC'
+  s.dependency 'CaptureSDK'
   s.platform = :ios, '10.0'
   s.static_framework = true
 
