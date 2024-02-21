@@ -11,7 +11,7 @@ Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  socket_mobile: ^1.0.0
+  socket_mobile: ^2.0.0
 ```
 
 ### iOS
@@ -39,10 +39,8 @@ More informations here: https://www.socketmobile.com/support/application-mode-fo
 In `android/app/src/main/AndroidManifest.xml` add:
 
 ```xml
-   <application
-        android:networkSecurityConfig="@xml/network_security_config">
-
-    <uses-permission android:name="android.permission.BLUETOOTH" />
+<application android:networkSecurityConfig="@xml/network_security_config">
+<uses-permission android:name="android.permission.BLUETOOTH" />
 ```
 
 In `android/app/src/main/res/xml/network_security_config.xml` add:

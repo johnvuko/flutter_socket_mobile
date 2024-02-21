@@ -1,3 +1,7 @@
+## [2.0.0]
+
+* Update CaptureSDK for iOS and Android
+
 ## [1.0.0]
 
 * Add Android support
